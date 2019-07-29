@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto',sans-serif;
+    box-sizing:border-box;
+}
+
+body{
+    background-image: url("background-img.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+/* common for checking*/
+nav,footer{
+    height:10%;
+}
+main{
+    height:80%;
+    display:flex;
+}
+
+/* Header */
+
+nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    min-height:8vh;
+    background:transparent;
+}
+.logo{
+    color:#e0dede;
+    text-transform:uppercase;
+    letter-spacing: 5px;
+    font-size:20px;
+    cursor: pointer;
+
+}
+
+.nav-links, .footer-links{
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+    width:35%;
+}
+.nav-links li{
+    border:2px solid transparent;
+    padding:5px;
+    transition:0.3s ease-out;
+}
+.nav-links li:hover{
+    border-bottom:2px solid #e8e8e8;
+    transition:0.3s ease-in;
+}
+
+
+/*footer*/
+footer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.footer-links{
+    text-transform: uppercase;
+}
+.footer-links li{
+    border-bottom:2px solid transparent;
+    padding:5px;
+    transition:0.3s ease-out;
+}
+.footer-links li:hover{
+    border-bottom:2px solid #e8e8e8;
+    transition:0.3s ease-in;
+}
+
+
+.nav-links a, .footer-links a{
+    color:#e0dede;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* Main Page Content*/
+
+main{
+    display:flex;
+    justify-content: space-around;
+    padding: 5% 10%;
+    width:100%;
+    align-items:center;
+}
+
+.sign-up,.main-message{
+    width:50%;
+    margin-left:100px;
+}
+
+/*Main Message*/
+.main-message h1{
+    font-size:75px;
+    line-height:1.1;
+    margin-bottom:5%;
+    width:100%;
+    color:#e0dede;
+
+}
+.main-message p{
+    width:80%;
+    font-size:25px;
+    color:#b3b3b3;
+}
+
+/*Sign UP Form*/
+.sign-up div{
+    display:flex;
+    flex-direction: column;
+}
+.sign-up h2{
+    letter-spacing:3px;
+    font-size:18px;
+    text-transform: uppercase;
+    color:#e0dede;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    width:80%;
+    margin:30px auto;
+}
+input{
+    border:none;
+    border-bottom:1px solid #b3b3b3;
+    margin:0;
+    background: rgba(0,0,0,0.3);
+}
+.input-form{
+    width:100%;
+    border:2px solid #b3b3b3;
+    border-bottom:none;
+    background:inherit;
+}
+.sign-up{
+    text-align:center;
+    width:50%;
+}
+input, button{
+    line-height:1.55;
+    height:3.5rem;
+    padding:0 1.25rem;
+    font-size:17px;
+}
+.sign-up button{
+    background:#2684CC;
+    color:#e0dede;
+    transition:0.2s
+}
+small{
+    line-height:20px;
+    color:#b3b1b1;
+    font-size:15px;
+}
+small > a{
+    text-decoration:none;
+    color:#e0dede;
+    font-weight:bold;
+}
+
+.input-form:first-child {
+    border-radius: 5px 5px 0 0;
+}
+.sign-up button{
+    border-radius: 0 0 5px 5px;
+    border:none;
+}
+button:hover{
+    cursor:pointer;
+    color:#eee;
+    background:#011a26;
+    transition:0.2s ease-in;
+    background: rgba(34,34,34,0.8);
+}
+
+
+/* Footer*/
+
+footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:8vh;
+    background:transparent;
+}
+footer p{
+    margin-left:9%;
+    color:#eee;
+    letter-spacing:1px;
+}
+footer ul li:last-child{
+    margin-right:9%;
+}
+
+/* Mobile View*/
+.burger div{
+    width:30px;
+    height:4px;
+    background:white;
+    margin:5px;
+}
+.burger{
+    /*display:none;*/
+    cursor:pointer;
+}
+
+::placeholder{
+    color:#e0dede;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links, .footer-links{
+        width:60%;
+    }
+    .sign-up,.main-message{
+        margin-left:0;
+    }
+    .main-message h1{
+        font-size:65px;
+        width:100%;
+    }
+
+
+}
+@media screen and (max-width:768px){
+    main{
+        display:flex;
+        flex-direction: column;
+        align-items:unset;
+    }
+    .nav-links{
+      display:none;
+    }
+    .main-message, .sign-up{
+        width:100%;
+    }
+    .main-message h1{
+        font-size:65px;
+        width:100%;
+    }
+    .main-message p{
+        width:100%;
+        font-size:15px;
+        margin-bottom:10px;
+    }
+    form{
+        margin:5px auto;
+    }
+    .sign-up h2{
+        font-size:12px;
+        letter-spacing: 2px;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+    footer p{
+        order:2
+    }
+    footer .footer-links{
+        width:90%;
+        text-align:center;
+        align-items:center;
+    }
+    .footer-links a{
+        font-size:10px;
+        letter-spacing:2px;
+    }
+    footer ul li:last-child{
+    margin-right:0;
+    }
+}
+@media screen and (max-width: 414px){
+    .main-message h1{
+        font-size:40px;
+        width:100%;
+    }
+    footer p{
+        padding-bottom:10px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .main-message h1{
+        font-size:30px;
+        width:100%;
+    }
+    main{
+        height:100%;
+    }
+    .footer-links a{
+        font-size:8px;
+        letter-spacing:1px;
+    }
+    footer p{
+        font-size:10px;
+        padding-bottom:10px;
+    }
+    footer ul li:last-child{
+        margin-right:0;
+    }
+}
+
+
+
